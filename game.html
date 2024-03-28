@@ -6,8 +6,8 @@
 <title>Pineapple Game</title>
 <style>
     body {
-        font-family: Arial, sans-serif;
-        background-color: #f3f3f3;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
         margin: 0;
         padding: 0;
         display: flex;
@@ -17,32 +17,35 @@
     }
 
     #container {
-        background-color: #fff;
+        background-color: #ffffff;
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
         text-align: center;
-        max-width: 400px;
-        width: 100%;
+        max-width: 500px;
+        width: 90%;
     }
 
     h1 {
         color: #4CAF50;
         margin-bottom: 20px;
+        font-size: 32px;
     }
 
     h2 {
         color: #333;
         margin-bottom: 20px;
+        font-size: 18px;
     }
 
     button, input[type="text"] {
         font-size: 16px;
-        padding: 10px;
+        padding: 12px 20px;
         border: none;
         border-radius: 5px;
-        margin: 5px;
+        margin: 10px;
         transition: all 0.3s ease;
+        cursor: pointer;
     }
 
     button:hover, input[type="text"]:focus {
@@ -57,7 +60,8 @@
     }
 
     #output p {
-        margin: 5px 0;
+        margin: 10px 0;
+        font-size: 16px;
     }
 </style>
 </head>
@@ -65,7 +69,7 @@
 <div id="container">
     <h1>Pineapple Game</h1>
     <div id="output"></div>
-    <input type="text" id="command" placeholder="Enter command (pineapple/stats)" onkeydown="if(event.keyCode==13) executeCommand()">
+    <input type="text" id="command" placeholder="Enter command" onkeydown="if(event.keyCode==13) executeCommand()">
     <button onclick="executeCommand()">Submit</button>
     <h2>Write a command for the game. Use "pineapple" to get pineapple, and "stats" to see your stats!</h2>
 </div>
