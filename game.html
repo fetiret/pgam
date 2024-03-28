@@ -28,33 +28,27 @@
 
     h1 {
         color: #4CAF50;
+        margin-bottom: 20px;
     }
 
     h2 {
         color: #333;
+        margin-bottom: 20px;
     }
 
-    button {
-        background-color: #4CAF50;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
+    button, input[type="text"] {
         font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
+        padding: 10px;
+        border: none;
         border-radius: 5px;
+        margin: 5px;
+        transition: all 0.3s ease;
     }
 
-    input[type=text] {
-        width: 60%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
+    button:hover, input[type="text"]:focus {
+        background-color: #4CAF50;
+        color: white;
+        outline: none;
     }
 
     #output {
@@ -71,7 +65,7 @@
 <div id="container">
     <h1>Pineapple Game</h1>
     <div id="output"></div>
-    <input type="text" id="command" placeholder="Enter command (pineapple/stats)">
+    <input type="text" id="command" placeholder="Enter command (pineapple/stats)" onkeydown="if(event.keyCode==13) executeCommand()">
     <button onclick="executeCommand()">Submit</button>
     <h2>Write a command for the game. Use "pineapple" to get pineapple, and "stats" to see your stats!</h2>
 </div>
